@@ -6,6 +6,11 @@
     --card-hover: #383838;
     --planet-size: 80px;
   }
+
+  header {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
   
   body {
     margin: 0;
