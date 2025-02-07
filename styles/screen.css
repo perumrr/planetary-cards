@@ -42,8 +42,8 @@
   }
   
   .planet {
-    width: var(--planet-size);
-    height: var(--planet-size);
+    width: var(--planet-size, 80px);
+    height: var(--planet-size, 80px);
     background: var(--planet-color);
     border-radius: 50%;
     margin: 0 auto 1rem;
