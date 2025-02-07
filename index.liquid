@@ -17,9 +17,10 @@ title: Planetary Playing Cards
   </header>
   <main class="grid">
     {% for planet in collections.planets %}
-    {% include "card.liquid" planet %}
+    {% include "card.liquid" with planet %}
     {% endfor %}
   </main>
+
   
   <script src="https://unpkg.com/scrollreveal"></script>
   <script>

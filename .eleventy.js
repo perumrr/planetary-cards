@@ -1,6 +1,15 @@
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addCollection("planets", (collectionApi) => {
+    const planets = require("./src/_data/planets.json");
+    return planets;
+  });
 
-// The export statement makes these settings available to other files in 11ty
-module.exports = function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("images");
-  eleventyConfig.addPassthroughCopy("styles");
+  return {
+    dir: {
+      input: "src",
+      includes: "_includes",
+      data: "_data",
+      output: "dist",
+    },
+  };
 };
