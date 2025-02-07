@@ -1,4 +1,3 @@
-/* Global Variables */
 :root {
     --font-family: 'Arial, sans-serif';
     --bg-color: #121212;
@@ -6,45 +5,45 @@
     --card-bg: #2c2c2c;
     --card-hover: #383838;
     --planet-border-radius: 50%;
-  }
+}
   
-  body {
+body {
     margin: 0;
     font-family: var(--font-family);
     background-color: var(--bg-color);
     color: var(--text-color);
-  }
+}
   
-  header {
+header {
     text-align: center;
     padding: 1rem;
-  }
+}
   
-  .grid {
+.grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     padding: 1rem;
-  }
+}
   
-  .card {
+.card {
     background: var(--card-bg);
     padding: 1rem;
     border-radius: 8px;
     text-align: center;
     transition: transform 0.2s, background 0.2s;
-  }
+}
   
-  .card:hover {
+.card:hover {
     transform: scale(1.05);
     background: var(--card-hover);
-  }
+}
   
-  .planet {
+.planet {
     width: 80px;
     height: 80px;
     background: var(--planet-color);
     border-radius: var(--planet-border-radius);
     margin: 0 auto 1rem;
-  }
+}
   
