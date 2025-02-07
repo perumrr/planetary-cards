@@ -1,16 +1,17 @@
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addCollection("planets", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("planets.json");
-  });
   eleventyConfig.addPassthroughCopy("styles");
-};
+  
+  eleventyConfig.addCollection("planets", function(api) {
+    const planetsData = require('./planets.json');
+    return planetsData;
+  });
 
-  return {
+  return {  
     dir: {
       input: "src",
       includes: "_includes",
       data: "_data",
       output: "dist",
-    },
+    }
   };
 };
