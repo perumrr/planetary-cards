@@ -1,7 +1,6 @@
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("./styles/screen.css");
-  
-  eleventyConfig.addCollection("planets", function() {
+  eleventyConfig.addPassthroughCopy("images");
+  eleventyConfig.addPassthroughCopy("styles");{
     const planets = require('./planets.json');
     return [
       { 
@@ -12,7 +11,9 @@ module.exports = function(eleventyConfig) {
       },
       ...planets
     ];
-  });
+  };
+
+
 
   return {
     dir: {
