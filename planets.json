@@ -2,7 +2,8 @@
   {
     "name": "Sun",
     "type": "G2V",
-    "color": "#ffd700"
+    "color": "#ffd700",
+    "size": "120px"
   },
   {
     "name": "Mercury",

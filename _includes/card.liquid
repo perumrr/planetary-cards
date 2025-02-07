@@ -1,4 +1,4 @@
-<div class="card" style="--planet-color: {{ planet.color }};">
+<article class="card" style="--planet-color: {{ planet.color }};">
   <div class="planet"></div>
   <h2>{{ planet.name }}</h2>
   {% if planet.type %}
@@ -6,4 +6,4 @@
   {% else %}
     <p>{{ planet.au }} AU</p>
   {% endif %}
-</div>
+</article>
