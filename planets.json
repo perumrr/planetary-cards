@@ -1,11 +1,10 @@
 [
-    { "name": "Mercury", "au": 0.39, "color": "#a6a6a6" },
-    { "name": "Venus", "au": 0.72, "color": "#d4a373" },
-    { "name": "Earth", "au": 1.0, "color": "#3c88b6" },
-    { "name": "Mars", "au": 1.52, "color": "#b65f3c" },
-    { "name": "Jupiter", "au": 5.2, "color": "#f2a365" },
-    { "name": "Saturn", "au": 9.58, "color": "#ffd27f" },
-    { "name": "Uranus", "au": 19.22, "color": "#a3d4f2" },
-    { "name": "Neptune", "au": 30.05, "color": "#6b93d6" }
-  ]
-  
+  { "name": "Mercury", "au": 0.39, "color": "#a6a6a6" },
+  { "name": "Venus", "au": 0.72, "color": "#d4a373" },
+  { "name": "Earth", "au": 1.0, "color": "#3c88b6" },
+  { "name": "Mars", "au": 1.52, "color": "#b65f3c" },
+  { "name": "Jupiter", "au": 5.2, "color": "#f2a365" },
+  { "name": "Saturn", "au": 9.58, "color": "#ffd27f" },
+  { "name": "Uranus", "au": 19.22, "color": "#a3d4f2" },
+  { "name": "Neptune", "au": 30.05, "color": "#6b93d6" }
+]

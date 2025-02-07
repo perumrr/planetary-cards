@@ -1,5 +1,10 @@
-<div class="card" style="--planet-color: {{ planet.color }};">
-  <div class="planet" style="background: var(--planet-color);"></div>
+<div class="card{% if planet.name == 'Sun' %} sun{% endif %}" 
+     style="--planet-color: {{ planet.color }};">
+  <div class="planet"></div>
   <h2>{{ planet.name }}</h2>
-  <p>{{ planet.au }} AU</p>
+  {% if planet.type %}
+    <p>Type: {{ planet.type }}</p>  <!-- Sun specific field -->
+  {% else %}
+    <p>{{ planet.au }} AU</p>
+  {% endif %}
 </div>

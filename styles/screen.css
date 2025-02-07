@@ -5,6 +5,7 @@
     --card-bg: #2c2c2c;
     --card-hover: #383838;
     --planet-border-radius: 50%;
+    --sun-color: #ffd700;
 }
   
 body {
@@ -32,7 +33,7 @@ header {
     border-radius: 8px;
     text-align: center;
     transition: transform 0.2s;
-    background: var(--planet-color, #fff);
+    background: var(--card-bg); 
 }
   
 .card:hover {
@@ -47,4 +48,20 @@ header {
     border-radius: var(--planet-border-radius);
     margin: 0 auto 1rem;
 }
+
+.sun .planet {
+    box-shadow: 0 0 30px var(--sun-color);
+}
   
+
+@media (max-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+}
