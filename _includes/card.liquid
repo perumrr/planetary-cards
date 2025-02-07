@@ -1,9 +1,9 @@
-<article class="card" style="--planet-color: {{ planet.color }}; --planet-size: {{ planet.size }};">
+<div class="card" style="--planet-color: {{ planet.color }};">
   <div class="planet"></div>
-  <h2 class="planet-name">{{ planet.name }}</h2>
+  <h2>{{ planet.name }}</h2>
   {% if planet.type %}
-    <p class="planet-info">Type: {{ planet.type }}</p>
+    <p>Type: {{ planet.type }}</p>
   {% else %}
-    <p class="planet-info">{{ planet.au }} AU</p>
+    <p>{{ planet.au }} AU</p>
   {% endif %}
-</article>
+</div>

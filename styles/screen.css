@@ -1,88 +1,45 @@
 :root {
+    --font-family: system-ui, sans-serif;
     --bg-color: #121212;
     --text-color: #ffffff;
     --card-bg: #2c2c2c;
     --card-hover: #383838;
-    --planet-border-radius: 50%;
-    --transition: all 0.3s ease;
-}
+    --planet-size: 80px;
+  }
   
-body {
+  body {
     margin: 0;
-    font-family: system-ui, sans-serif;
+    font-family: var(--font-family);
     background-color: var(--bg-color);
     color: var(--text-color);
-    line-height: 1.6;
-}
+  }
   
-.header {
-    text-align: center;
-    padding: 2rem;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-  
-.grid {
+  .grid {
     display: grid;
-    gap: 2rem;
-    padding: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     max-width: 1200px;
     margin: 0 auto;
-}
+  }
   
-.card {
+  .card {
     background: var(--card-bg);
-    padding: 1.5rem;
-    border-radius: 12px;
+    padding: 1rem;
+    border-radius: 8px;
     text-align: center;
-    transition: var(--transition);
-}
+    transition: transform 0.3s ease;
+  }
   
-.card:hover {
+  .card:hover {
     transform: translateY(-5px);
     background: var(--card-hover);
-}
-
-.planet {
+  }
+  
+  .planet {
     width: var(--planet-size);
     height: var(--planet-size);
     background: var(--planet-color);
-    border-radius: var(--planet-border-radius);
+    border-radius: 50%;
     margin: 0 auto 1rem;
-    position: relative;
-    transition: var(--transition);
-}
-  
-.card:first-child .planet {
-    background: linear-gradient(
-      45deg,
-      var(--planet-color),
-      #ff8f00
-    );
-    box-shadow: 0 0 40px rgba(255,215,0,0.3);
-}
-  
-.planet-name {
-    margin: 0.5rem 0;
-    font-size: 1.25rem;
-}
-  
-.planet-info {
-    margin: 0;
-    color: rgba(255,255,255,0.8);
-    font-size: 0.9rem;
-}
-  
-@media (max-width: 768px) {
-    .grid {
-      grid-template-columns: repeat(2, 1fr);
-      padding: 1rem;
-      gap: 1rem;
-    }
-}
-  
-@media (max-width: 480px) {
-    .grid {
-      grid-template-columns: 1fr;
-    }
-}
+  }

@@ -2,12 +2,21 @@
 layout: layout.liquid
 title: Planetary Playing Cards
 ---
-<header class="header">
-  <h1>Planetary Playing Cards</h1>
+<header>
+  <h1>{{ title }}</h1>
 </header>
-
 <main class="grid">
   {% for planet in collections.planets %}
-    {% include "_includes/card.liquid", planet: planet %}
+    {% include "card.liquid", planet: planet %}
   {% endfor %}
 </main>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+  ScrollReveal().reveal('.card', {
+    delay: 200,
+    distance: '50px',
+    origin: 'bottom',
+    interval: 100
+  });
+</script>
