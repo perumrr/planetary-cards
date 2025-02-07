@@ -2,6 +2,28 @@
 layout: layout.liquid
 title: 11ty Boilerplate
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planetary Playing Cards</title>
+  <link rel="stylesheet" href="/styles/screen.css">
+</head>
 
-<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
-<img alt="pine" src="/images/pine.png" width="50" />
+<body>
+  <header>
+    <h1>Planetary Playing Cards</h1>
+  </header>
+  <main class="grid">
+    {% for planet in collections.planets %}
+    {% include "partials/card.liquid" planet %}
+    {% endfor %}
+  </main>
+  
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    ScrollReveal().reveal('.card', { delay: 200, distance: '50px', origin: 'bottom' });
+  </script>
+</body>
+</html>
