@@ -1,67 +1,88 @@
 :root {
-    --font-family: 'Arial, sans-serif';
     --bg-color: #121212;
     --text-color: #ffffff;
     --card-bg: #2c2c2c;
     --card-hover: #383838;
     --planet-border-radius: 50%;
-    --sun-color: #ffd700;
-}
+    --transition: all 0.3s ease;
+  }
   
-body {
+  body {
     margin: 0;
-    font-family: var(--font-family);
+    font-family: system-ui, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
-}
+    line-height: 1.6;
+  }
   
-header {
+  .header {
     text-align: center;
-    padding: 1rem;
-}
+    padding: 2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
   
-.grid {
+  .grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    padding: 1rem;
-}
+    gap: 2rem;
+    padding: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    max-width: 1200px;
+    margin: 0 auto;
+  }
   
-.card {
+  .card {
     background: var(--card-bg);
-    padding: 1rem;
-    border-radius: 8px;
+    padding: 1.5rem;
+    border-radius: 12px;
     text-align: center;
-    transition: transform 0.2s;
-    background: var(--card-bg); 
-}
+    transition: var(--transition);
+  }
   
-.card:hover {
-    transform: scale(1.05);
+  .card:hover {
+    transform: translateY(-5px);
     background: var(--card-hover);
-}
+  }
   
-.planet {
-    width: 80px;
-    height: 80px;
+  .planet {
+    width: var(--planet-size);
+    height: var(--planet-size);
     background: var(--planet-color);
     border-radius: var(--planet-border-radius);
     margin: 0 auto 1rem;
-}
-
-.sun .planet {
-    box-shadow: 0 0 30px var(--sun-color);
-}
+    position: relative;
+    transition: var(--transition);
+  }
   
-
-@media (max-width: 768px) {
+  .card:first-child .planet {
+    background: linear-gradient(
+      45deg,
+      var(--planet-color),
+      #ff8f00
+    );
+    box-shadow: 0 0 40px rgba(255,215,0,0.3);
+  }
+  
+  .planet-name {
+    margin: 0.5rem 0;
+    font-size: 1.25rem;
+  }
+  
+  .planet-info {
+    margin: 0;
+    color: rgba(255,255,255,0.8);
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
     .grid {
       grid-template-columns: repeat(2, 1fr);
+      padding: 1rem;
+      gap: 1rem;
     }
-}
-
-@media (max-width: 480px) {
+  }
+  
+  @media (max-width: 480px) {
     .grid {
       grid-template-columns: 1fr;
     }
-}
+  }
