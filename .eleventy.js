@@ -1,8 +1,8 @@
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addCollection("planets", (collectionApi) => {
-    const planets = require("./src/_data/planets.json");
-    return planets;
+module.exports = function(eleventyConfig) {
+  eleventyConfig.addCollection("planets", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("planets.json");
   });
+};
 
   return {
     dir: {
