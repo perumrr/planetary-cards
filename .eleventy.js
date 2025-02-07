@@ -2,6 +2,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("planets", function(collectionApi) {
     return collectionApi.getFilteredByGlob("planets.json");
   });
+  eleventyConfig.addPassthroughCopy("styles");
 };
 
   return {
