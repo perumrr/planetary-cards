@@ -50,6 +50,8 @@
   }
 
   .card:first-child .planet {
+    width: var(220px);
+    height: var(220px);
     background: linear-gradient(45deg, var(--planet-color), #ff8f00);
     box-shadow: 0 0 40px rgba(255,215,0,0.3);
   }
