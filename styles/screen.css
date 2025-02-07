@@ -5,45 +5,45 @@
     --card-hover: #383838;
     --planet-border-radius: 50%;
     --transition: all 0.3s ease;
-  }
+}
   
-  body {
+body {
     margin: 0;
     font-family: system-ui, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
-  }
+}
   
-  .header {
+.header {
     text-align: center;
     padding: 2rem;
     border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
+}
   
-  .grid {
+.grid {
     display: grid;
     gap: 2rem;
     padding: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     max-width: 1200px;
     margin: 0 auto;
-  }
+}
   
-  .card {
+.card {
     background: var(--card-bg);
     padding: 1.5rem;
     border-radius: 12px;
     text-align: center;
     transition: var(--transition);
-  }
+}
   
-  .card:hover {
+.card:hover {
     transform: translateY(-5px);
     background: var(--card-hover);
-  }
-  
-  .planet {
+}
+
+.planet {
     width: var(--planet-size);
     height: var(--planet-size);
     background: var(--planet-color);
@@ -51,38 +51,38 @@
     margin: 0 auto 1rem;
     position: relative;
     transition: var(--transition);
-  }
+}
   
-  .card:first-child .planet {
+.card:first-child .planet {
     background: linear-gradient(
       45deg,
       var(--planet-color),
       #ff8f00
     );
     box-shadow: 0 0 40px rgba(255,215,0,0.3);
-  }
+}
   
-  .planet-name {
+.planet-name {
     margin: 0.5rem 0;
     font-size: 1.25rem;
-  }
+}
   
-  .planet-info {
+.planet-info {
     margin: 0;
     color: rgba(255,255,255,0.8);
     font-size: 0.9rem;
-  }
+}
   
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .grid {
       grid-template-columns: repeat(2, 1fr);
       padding: 1rem;
       gap: 1rem;
     }
-  }
+}
   
-  @media (max-width: 480px) {
+@media (max-width: 480px) {
     .grid {
       grid-template-columns: 1fr;
     }
-  }
+}
